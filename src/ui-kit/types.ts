@@ -127,6 +127,10 @@ export interface AutocompleteKeyValueConfig {
    * The human-readable value of the option
    */
   valueProperty: string;
+  /**
+   * Property to use to display subheading
+   */
+  subheadProperty?: string;
 }
 // Download
 export type AccessType = 'Public'|'Private';

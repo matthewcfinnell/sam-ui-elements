@@ -53,7 +53,6 @@ export type MdTabBodyOriginState = 'left' | 'right';
  * @docs-private
  */
 @Component({
-  moduleId: module.id,
   selector: 'md-tab-body, mat-tab-body',
   templateUrl: 'tab-body.html',
   styleUrls: ['tab-body.scss'],

@@ -236,6 +236,11 @@ export class SamModalComponent implements OnInit {
     this.submit.emit(this.args);
   }
 
+
+  preventClosing(evt) {
+    evt.stopPropagation();
+  }
+
   private createBackdrop() {
     this.backdropElement = document.createElement('div');
     this.backdropElement.classList.add('modal-backdrop');
@@ -247,9 +252,6 @@ export class SamModalComponent implements OnInit {
     }
   }
 
-  private preventClosing(evt) {
-    evt.stopPropagation();
-  }
   private setModalElementIds() {
     if (this.id) {
       this.modalElIds.cancelId = this.id + 'Cancel';

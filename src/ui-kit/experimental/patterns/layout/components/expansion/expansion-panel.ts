@@ -43,7 +43,6 @@ export const EXPANSION_PANEL_ANIMATION_TIMING = '225ms cubic-bezier(0.4,0.0,0.2,
  * Please refer to README.md for examples on how to use it.
  */
 @Component({
-  moduleId: module.id,
   // styleUrls: ['./expansion-panel.css'],
   selector: 'md-expansion-panel, mat-expansion-panel, sam-expansion-panel',
   templateUrl: './expansion-panel.html',
@@ -53,7 +52,7 @@ export const EXPANSION_PANEL_ANIMATION_TIMING = '225ms cubic-bezier(0.4,0.0,0.2,
   ],
   animations: [
     trigger('bodyExpansion', [
-      state('collapsed', style({height: '0px'})),
+      state('collapsed', style({height: '0Ppx'})),
       state('expanded', style({height: '*'})),
       transition('expanded <=> collapsed', animate(EXPANSION_PANEL_ANIMATION_TIMING)),
     ]),

@@ -11,6 +11,7 @@ import {
 import {
   faChevronLeft,
   faChevronRight,
+  IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Paginator } from './paginator';
@@ -27,8 +28,8 @@ export class SamPaginationNextComponent implements OnInit {
 
   public paginator: Paginator;
 
-  public faChevronLeft = faChevronLeft;
-  public faChevronRight = faChevronRight;
+  public faChevronLeft: IconDefinition = faChevronLeft;
+  public faChevronRight: IconDefinition  = faChevronRight;
 
   /**
    * Sets the number of units per page

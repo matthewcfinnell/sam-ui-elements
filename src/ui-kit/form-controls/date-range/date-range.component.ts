@@ -15,7 +15,8 @@ import {
   NG_VALUE_ACCESSOR,
   ValidatorFn
 } from '@angular/forms';
-import * as moment from 'moment/moment';
+import * as moment_ from 'moment/moment';
+const moment = moment_;
 import { SamFormService } from '../../form-service';
 
 /**
@@ -116,8 +117,8 @@ export class SamDateRangeComponent
     year: undefined
   };
 
-  private startDateValue;
-  private endDateValue;
+  public startDateValue;
+  public endDateValue;
 
   public static dateRangeValidation(c: AbstractControl) {
     const error = {

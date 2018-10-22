@@ -5,24 +5,22 @@ import {
   EventEmitter,
   ElementRef, 
   ViewChild, 
-  AfterViewInit,
   OnInit,
 } from '@angular/core';
 
 import {
   trigger,
-  state,
   style,
   animate,
   transition,
   query,
-  animateChild,
   keyframes,
   stagger
 } from '@angular/animations';
 import { 
   faSearch,
-  faCircleNotch
+  faCircleNotch,
+  IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 
 import { PrototypeSearchService } from './search.service';
@@ -73,8 +71,8 @@ export class SamSearchComponent implements OnInit{
   
   loading = false;
   results = [];
-  faSearch = faSearch;
-  faCircleNotch = faCircleNotch;
+  faSearch: IconDefinition = faSearch;s
+  faCircleNotch: IconDefinition = faCircleNotch;
   
   ngOnInit(): void{
     this.resultsWidth = "450px";
@@ -89,7 +87,7 @@ export class SamSearchComponent implements OnInit{
     .switch()
     // act on the return of the search
     .subscribe(
-      (results) => { // on success
+      (results: any) => { // on success
         this.results = results;
         this.loading = false;
       }

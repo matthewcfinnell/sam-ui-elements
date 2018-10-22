@@ -4,7 +4,9 @@ import {
   ViewChild,
   ChangeDetectorRef, 
   AfterViewInit,
-  forwardRef } from '@angular/core';
+  forwardRef, 
+  InjectionToken,
+  Provider} from '@angular/core';
 
 import {
   ControlValueAccessor,
@@ -16,7 +18,7 @@ import {
 import { SamFormService } from '../../form-service';
 import { LabelWrapper } from '../../wrappers/label-wrapper';
 
-export function AccessorToken (className) {
+export function AccessorToken (className): Provider {
   return {
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => className),
@@ -24,7 +26,7 @@ export function AccessorToken (className) {
   };
 }
 
-export function ValidatorToken (className) {
+export function ValidatorToken (className): Provider {
   return {
     provide: NG_VALIDATORS,
     useExisting: forwardRef(() => className),

@@ -19,4 +19,4 @@ import { SamWrapperModule } from '../../wrappers';
 })
 export class SamDateModule {}
 
-export { SamDateComponent } from './date.component';
+export { SamDateComponent, provideComponent } from './date.component';

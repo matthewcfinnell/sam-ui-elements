@@ -19,7 +19,8 @@ import { AutocompleteService } from '../autocomplete/autocomplete.service';
 import { AutocompleteCache } from './autocomplete-cache';
 
 import { SamFormService } from '../../form-service';
-import { KeyHelper } from '../../utilities/key-helper/key-helper';
+import { KeyHelper } from '../../utilities';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'sam-autocomplete-multiselect',
   templateUrl: 'autocomplete-multiselect.template.html',
@@ -191,7 +192,6 @@ export class SamAutocompleteMultiselectComponent
   /**
    * Allow to control whether display the category option in the result list or
    * not
-   * @type {boolean}
    */
   @Input() public displayCategory: boolean = true;
 
@@ -205,9 +205,9 @@ export class SamAutocompleteMultiselectComponent
 
   public innerValue: Array<any> = [];
   public isDisabled: boolean = false;
-  private list: any = [];
-  private inputTimer: any;
+  public list: any = [];
   public displaySpinner: boolean = false;
+  private inputTimer: any;
   private textAreaMinHeight = 22;
   private debounceTime = 250;
   private cache: AutocompleteCache = new AutocompleteCache();
@@ -635,7 +635,7 @@ export class SamAutocompleteMultiselectComponent
   /***************************************************************
    * Logic for filtering options                                 *
    ***************************************************************/
-  public fetchFromService(searchString: string, options: any, context: this) {
+  public fetchFromService(searchString: string, options: any, context: this): Subscription {
     context.displaySpinner = true;
     return context.service
       .fetch(searchString,
@@ -923,7 +923,7 @@ export class SamAutocompleteMultiselectComponent
     this.updateMarked();
   }
 
-  public clearSearch() {
+  public clearSearch(...args: any[]) {
     this.searchText = '';
     if(this.textArea && this.textArea.nativeElement){
       this.textArea.nativeElement.style.height = this.textAreaMinHeight+"px";

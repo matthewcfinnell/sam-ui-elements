@@ -1,11 +1,14 @@
-import { Component,
-         OnInit,
-         ViewChild,
-         ElementRef,
-         Input,
-         Output,
-         EventEmitter } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
+import { Observable, Subscription, fromEvent } from 'rxjs';
+import { merge } from 'rxjs/operators';
 
 @Component({
   selector: 'sam-image',
@@ -55,13 +58,13 @@ export class SamImageComponent implements OnInit {
 
   ngOnInit() {
     this.fileChangeStream =
-      Observable.fromEvent(this.filePicker.nativeElement, 'change');
+      fromEvent(this.filePicker.nativeElement, 'change');
     this.editButtonStream =
-      Observable.fromEvent(this.editButton.nativeElement, 'click');
+      fromEvent(this.editButton.nativeElement, 'click');
     this.cancelButtonStream =
-      Observable.fromEvent(this.cancelButton.nativeElement, 'click');
+      fromEvent(this.cancelButton.nativeElement, 'click');
     this.saveButtonStream =
-      Observable.fromEvent(this.saveButton.nativeElement, 'click');
+      fromEvent(this.saveButton.nativeElement, 'click');
 
     this.reader.onload = (event: any) => {
       this.tmpSrc = event.target.result;
@@ -69,8 +72,10 @@ export class SamImageComponent implements OnInit {
 
     this.editModeSubscription =
       this.editButtonStream
-      .merge(this.cancelButtonStream)
-      .merge(this.saveButtonStream)
+      .pipe(
+        merge(this.cancelButtonStream),
+        merge(this.saveButtonStream)
+      )
       .subscribe(
         (event) => {
           if (this.editable) {

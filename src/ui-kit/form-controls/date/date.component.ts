@@ -7,16 +7,17 @@ import {
   EventEmitter,
   OnInit,
   OnChanges,
-  forwardRef
+  forwardRef,
+  Type
 } from '@angular/core';
 
-import * as moment from 'moment/moment';
+import * as moment_ from 'moment/moment';
+const moment = moment_;
 
 import {
   NG_VALUE_ACCESSOR,
   ControlValueAccessor,
   FormControl,
-  Validators,
   ValidatorFn,
   AbstractControl
 } from '@angular/forms';
@@ -27,6 +28,21 @@ import {
   KeyHelper
 } from '../../utilities/key-helper/key-helper';
 
+export function provideComponent (): Type<SamDateComponent> {
+  return SamDateComponent;
+}
+
+export function dateRequiredValidator (c: AbstractControl) {
+  if (c.dirty && !c.value) {
+    return {
+      dateRequiredError: {
+        message: 'This field is required'
+      }
+    };
+  }
+  return undefined;
+};
+
 /**
  * The <sam-date> component is a Date entry portion of a form
  */
@@ -35,7 +51,7 @@ import {
   templateUrl: 'date.template.html',
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => SamDateComponent),
+    useExisting: SamDateComponent,
     multi: true
   }]
 })
@@ -126,17 +142,8 @@ export class SamDateComponent
     };
   }
 
-  static dateRequired() {
-    return (c: AbstractControl) => {
-      if (c.dirty && !c.value) {
-        return {
-          dateRequiredError: {
-            message: 'This field is required'
-          }
-        };
-      }
-      return undefined;
-    };
+  static dateRequired(): ValidatorFn {
+    return dateRequiredValidator;
   }
   
   static dateValidation() {

@@ -2,7 +2,7 @@ import {
   Injectable
 } from '@angular/core';
 
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 
 @Injectable()
 export class PrototypeSearchService{
@@ -80,7 +80,7 @@ export class PrototypeSearchService{
   
   
   public loadData(query: string) {
-    return Observable.from([this.results]).map(response => {
+    return from([this.results]).map(response => {
       return response.map(item => {
         
         let description;

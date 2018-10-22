@@ -14,6 +14,7 @@ import {
 import {
   faLongArrowAltLeft,
   faTimes,
+  IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -55,8 +56,8 @@ export class SamPageNextComponent extends MdSidenavContainer {
   @ContentChild(SamToolbarComponent)
     public toolbar: SamToolbarComponent;
 
-  public backIcon = faLongArrowAltLeft;
-  public closeIcon = faTimes;
+  public backIcon: IconDefinition = faLongArrowAltLeft;
+  public closeIcon: IconDefinition = faTimes;
   constructor(_element: ElementRef, _renderer: Renderer2, _ngZone: NgZone, @Optional() public _pageService: SamPageNextService) {
     super(null, _element, _renderer, _ngZone);
   }

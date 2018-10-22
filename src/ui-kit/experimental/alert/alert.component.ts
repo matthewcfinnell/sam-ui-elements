@@ -3,7 +3,8 @@ import {
   faExclamationCircle,
   faInfoCircle,
   faCheckCircle,
-  faExclamationTriangle
+  faExclamationTriangle,
+  IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 /**
  * The <sam-alert> component keeps users informed of important and (optionally)
@@ -24,7 +25,7 @@ export class SamAlertNextComponent {
     'success': { class: 'sam-alert-success', sr: 'success alert'},
     'warning': { class: 'sam-alert-warning', sr: 'warning alert'},
   };
-  selectedIconTypes = {
+  selectedIconTypes: { [key: string]: IconDefinition } = {
       'success': faCheckCircle,
       'error': faExclamationCircle,
       'info': faInfoCircle,

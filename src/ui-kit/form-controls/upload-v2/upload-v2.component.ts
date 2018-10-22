@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
+import { switchMap } from 'rxjs/operators';
 import {
   Component, ElementRef, Input, ViewChild, Renderer2,
   forwardRef, SimpleChanges,  Output,
@@ -13,7 +14,10 @@ import {
     UploadFileActionModalConfig, ToggleUploadFileAction,
     UploadedFileData
 } from '../../types';
-import * as moment from 'moment';
+
+import * as moment_ from 'moment/moment';
+const moment = moment_;
+
 
 export type RequestGenerator =
   (file: File) => HttpRequest<any> | Observable<HttpRequest<any>>;
@@ -509,7 +513,9 @@ export class SamUploadComponentV2 implements ControlValueAccessor {
     const request = this.deleteRequest(uf);
 
     if (request instanceof Observable) {
-      return request.switchMap(req => this.httpClient.request(req));
+      return request.pipe(
+        switchMap(req => this.httpClient.request(req))
+      )
     } else if (request instanceof HttpRequest) {
       return this.httpClient.request(request);
     } else {
@@ -522,10 +528,12 @@ export class SamUploadComponentV2 implements ControlValueAccessor {
     const request = this.uploadRequest(file);
 
     if (request instanceof Observable) {
-      return request.switchMap((req: HttpRequest<any>) => {
-        upload.request = req;
-        return this.httpClient.request(req);
-      });
+      return request.pipe(
+        switchMap((req: HttpRequest<any>) => {
+          upload.request = req;
+          return this.httpClient.request(req);
+        })
+      );
     } else if (request instanceof HttpRequest) {
       upload.request = request;
       return this.httpClient.request(request);
