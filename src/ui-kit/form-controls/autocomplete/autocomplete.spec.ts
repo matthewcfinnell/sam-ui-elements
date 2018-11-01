@@ -8,7 +8,7 @@ import { SamFormService } from '../../form-service';
 import { SamWrapperModule } from '../../wrappers'; 
 
 // Load the implementations that should be tested
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 
 import { SamAutocompleteComponent } from './autocomplete.component';
 import { AutocompleteService } from '../autocomplete/autocomplete.service';

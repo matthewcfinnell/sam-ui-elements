@@ -11,3 +11,5 @@ import {
   imports: [ CommonModule ],
 })
 export class AccordionsModule { }
+export {  SamAccordionSection,
+  SamAccordionComponent}from './accordion.component';

@@ -7,7 +7,7 @@ import { SamTimeComponent } from '../time/time.component';
 import { SamDateTimeComponent } from '../date-time/date-time.component';
 import { SamFormService } from '../../form-service';
 import { SamWrapperModule } from '../../wrappers';
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 
 describe('The Sam Date Range component', () => {
   describe('isolated tests', () => {

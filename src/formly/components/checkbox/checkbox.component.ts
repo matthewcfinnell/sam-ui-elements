@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 
 import { AbstractSamFormly } from '../../sam-formly';
-import { SamCheckboxComponent } from '../../../ui-kit';
+import { SamCheckboxComponent } from '../../../ui-kit/sam-ui-elements.module';
 
 @Component({
  template: `

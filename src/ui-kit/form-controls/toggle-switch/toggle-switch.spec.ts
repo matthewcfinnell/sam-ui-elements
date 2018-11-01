@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 // Load the implementations that should be tested
 import { SamToggleSwitchComponent } from './toggle-switch.component';
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 import {By} from '@angular/platform-browser';
 
 describe('The Sam Toggle Switch component', () => {

@@ -7,4 +7,4 @@ import { SamActionsDropdownComponent } from './actions-dropdown.component';
     declarations: [ SamActionsDropdownComponent ],
     exports: [ SamActionsDropdownComponent ],
 })
-export class SamActionDropdownModule { }
+export class SamActionDropDownModule { }

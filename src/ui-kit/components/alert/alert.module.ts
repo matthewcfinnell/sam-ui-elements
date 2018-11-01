@@ -8,3 +8,5 @@ import { SamAlertComponent } from './alert.component';
     exports: [ SamAlertComponent ],
 })
 export class SamAlertModule { }
+
+export {SamAlertComponent}from './alert.component';

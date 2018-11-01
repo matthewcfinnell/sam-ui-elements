@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 // Load the implementations that should be tested
 import { ResultsTemplateComponent } from './results.component';
 import { ListResultsMessageComponent } from './list-results-message';
-import { SamPaginationComponent } from '../components/pagination';
+import { SamPaginationComponent } from '../components/pagination/pagination.module';
 import { By } from '@angular/platform-browser';
 
 

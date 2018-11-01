@@ -7,7 +7,7 @@ import { GridDirective } from './grid/grid.directive';
 import { ColumnDirective } from './grid/column.directive';
 import { RowDirective } from './grid/row.directive';
 import { TitleAndSectionComponent } from './title-and-section.component';
-import { SamBadgeComponent } from '../components/badge';
+import { SamBadgeComponent } from '../components/badge/badge.module';
 
 
 describe('FormOnlyPageTemplate component', () => {

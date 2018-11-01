@@ -5,17 +5,17 @@ import { Component } from '@angular/core';
 import { FormStepComponent } from './form-step.component';
 import { By } from '@angular/platform-browser';
 import { SamStickyComponent } from '../../directives/sticky/sticky.component';
-import { SamSidenavModule } from '../../components/sidenav';
-import { SamBreadcrumbsComponent } from '../../components/breadcrumbs';
-import { SamAlertComponent } from '../../components/alert';
+import { SamSidenavModule } from '../../components/sidenav/sidenav.module';
+import { SamBreadcrumbsComponent } from '../../components/breadcrumbs/breadcrumbs.module';
+import { SamAlertComponent } from '../../components/alert/alert.module';
 import { PageTemplateComponent } from '../page.component';
 import { SidebarTemplateComponent } from '../sidebar.component';
 import { GridDirective } from '../grid/grid.directive';
 import { ColumnDirective } from '../grid/column.directive';
 import { RowDirective } from '../grid/row.directive';
 import { TitleAndSectionComponent } from '../title-and-section.component';
-import { SamBadgeComponent } from '../../components/badge';
-import { SamElementsModule } from '../../elements';
+import { SamBadgeComponent } from '../../components/badge/badge.module';
+import { SamElementsModule } from '../../elements/elements.module';
 import { data } from '../../components/sidenav/services/testdata'; 
 
 

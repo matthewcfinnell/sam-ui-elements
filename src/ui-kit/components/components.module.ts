@@ -5,32 +5,31 @@ import { CommonModule } from '@angular/common';
 
 import { SamFormControlsModule } from '../form-controls';
 import { SamDirectivesModule } from '../directives';
-import { SamElementsModule } from '../elements';
-
-import { AccordionsModule } from './accordion';
-import { SamAlertModule } from './alert';
-import { SamAlertFooterModule } from './alert-footer';
-import { SamBadgeModule } from './badge';
-import { SamBannerModule } from './banner';
-import { SamBreadcrumbsModule } from './breadcrumbs';
-import { SamDownloadModule } from './download';
-import { SamHeaderModule } from './header';
-import { SamHistoryModule } from './history';
-import { SamModalModule } from './modal';
-import { SamMultiSelectDropdownModule } from './multiselect-dropdown';
-import { SamPaginationModule } from './pagination';
-import { SamPipesModule } from '../pipes';
-import { SamPointOfContactModule } from './point-of-contact';
-import { SamProgressModule } from './progress-bar';
-import { SamSidenavModule } from './sidenav';
-import { SamSpinnerModule } from './spinner';
-import { SamTabsModule } from './tabs';
+import { SamElementsModule } from '../elements/elements.module';
+import {SamActionModule}from './actions/Action.module';
+import { AccordionsModule } from './accordion/accordion.module';
+import { SamAlertModule } from './alert/alert.module';
+import { SamAlertFooterModule } from './alert-footer/alert-footer.module';
+import { SamBadgeModule } from './badge/badge.module';
+import { SamBannerModule } from './banner/banner.module';
+import { SamBreadcrumbsModule } from './breadcrumbs/breadcrumbs.module';
+import { SamDownloadModule } from './download/download.module';
+import { SamHeaderModule } from './header/header.module';
+import { SamHistoryModule } from './history/history.module';
+import { SamModalModule } from './modal/modal.module';
+import { SamMultiSelectDropdownModule } from './multiselect-dropdown/multiselect-dropdown.module';
+import { SamPaginationModule } from './pagination/pagination.module';
+import { SamPipesModule } from '../pipes/pipes.module';
+import { SamPointOfContactModule } from './point-of-contact/point-of-contact.module';
+import { SamProgressModule } from './progress-bar/progress.module';
+import { SamSidenavModule } from './sidenav/sidenav.module';
+import { SamSpinnerModule } from './spinner/spinner.module';
+import { SamTabsModule } from './tabs/tabs.module';
 import { SamWrapperModule } from '../wrappers';
-import { SamCommentsModule } from './comments';
-import { SamImageModule } from './image';
-import { SamActionButtonModule, SamActionDropdownModule } from './actions';
-import { SamDataTableModule } from './data-table';
-import { SamPageTitleModule } from './page-title';
+import { SamCommentsModule } from './comments/comments.module';
+import { SamImageModule } from './image/image.module';
+import { SamDataTableModule } from './data-table/data-table.module';
+import { SamPageTitleModule } from './page-title/page-title.module';
 
 @NgModule({
   imports: [
@@ -52,8 +51,7 @@ import { SamPageTitleModule } from './page-title';
     SamModalModule,
     SamBreadcrumbsModule,
     SamProgressModule,
-    SamActionButtonModule,
-    SamActionDropdownModule,
+    SamActionModule,
     SamAlertModule,
     SamAlertFooterModule,
     SamBadgeModule,
@@ -70,8 +68,7 @@ import { SamPageTitleModule } from './page-title';
     
   ],
   exports: [
-    SamActionButtonModule,
-    SamActionDropdownModule,
+    SamActionModule,
     SamAlertModule,
     SamAlertFooterModule,
     SamBadgeModule,
@@ -96,3 +93,66 @@ import { SamPageTitleModule } from './page-title';
   ]
 })
 export class SamComponentsModule {}
+
+
+export { SamFormControlsModule } from '../form-controls';
+export { SamDirectivesModule } from '../directives';
+export { SamElementsModule } from '../elements/elements.module';
+export {SamActionModule}from './actions/Action.module';
+export { AccordionsModule } from './accordion/accordion.module';
+export { SamAlertModule } from './alert/alert.module';
+export { SamAlertFooterModule } from './alert-footer/alert-footer.module';
+export { SamBadgeModule } from './badge/badge.module';
+export { SamBannerModule } from './banner/banner.module';
+export { SamBreadcrumbsModule } from './breadcrumbs/breadcrumbs.module';
+export { SamDownloadModule } from './download/download.module';
+export { SamHeaderModule } from './header/header.module';
+export { SamHistoryModule } from './history/history.module';
+export { SamModalModule } from './modal/modal.module';
+export { SamMultiSelectDropdownModule } from './multiselect-dropdown/multiselect-dropdown.module';
+export { SamPaginationModule } from './pagination/pagination.module';
+export { SamPipesModule } from '../pipes/pipes.module';
+export { SamPointOfContactModule } from './point-of-contact/point-of-contact.module';
+export { SamProgressModule } from './progress-bar/progress.module';
+export { SamSidenavModule } from './sidenav/sidenav.module';
+export { SamSpinnerModule } from './spinner/spinner.module';
+export { SamTabsModule } from './tabs/tabs.module';
+export { SamWrapperModule } from '../wrappers';
+export { SamCommentsModule } from './comments/comments.module';
+export { SamImageModule } from './image/image.module';
+export { SamDataTableModule } from './data-table/data-table.module';
+export { SamPageTitleModule } from './page-title/page-title.module';
+
+
+
+
+
+
+
+
+
+
+//  export * from './accordion';
+//  export * from './actions';
+// export * from './alert';
+//  export * from './alert-footer';
+//  export * from './badge';
+//  export * from './banner/banner.module';
+//  export * from './breadcrumbs/breadcrumbs.module';
+//  export * from './comments';
+//  export * from './data-table';
+//  export * from './download';
+//  export * from './header';
+//  export * from './history';
+//  export * from './image';
+//  export * from './modal';
+//  export * from './multiselect-dropdown';
+//  export * from './pagination';
+//  export * from './point-of-contact';
+//  export * from './sidenav';
+//  export * from './spinner';
+//  export * from './tabs';
+//  export * from './page-title';
+//  export * from './components.module';
+//  export * from './progress-bar';
+

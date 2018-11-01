@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 // import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SamActionsListComponent } from './actions-list.component';
-import { SamComponentsModule } from '../../components';
+import { SamComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [

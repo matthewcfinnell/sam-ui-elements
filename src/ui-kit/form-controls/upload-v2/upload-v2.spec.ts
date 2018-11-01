@@ -5,10 +5,10 @@ import { SamDragDropDirective } from '../../directives/drag-drop/drag-drop.direc
 import { FilesizePipe } from '../../pipes/filesize/filesize.pipe';
 import { SamProgress } from '../../components/progress-bar/progress-bar.component';
 import { HttpClient, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs-compat';
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { SamModalModule } from '../../components/modal';
+import { SamModalModule } from '../../components/modal/modal.module';
 
 class MockHttpClient {
   request() {

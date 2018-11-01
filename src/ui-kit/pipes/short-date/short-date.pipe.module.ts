@@ -8,3 +8,4 @@ import { ShortDatePipe } from './short-date.pipe';
     exports: [ ShortDatePipe ],
 })
 export class ShortDateModule { }
+export {ShortDatePipe} from './short-date.pipe';

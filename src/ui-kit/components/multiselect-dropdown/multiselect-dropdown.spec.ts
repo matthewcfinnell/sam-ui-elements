@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import {
     SamMultiSelectDropdownComponent
 } from './multiselect-dropdown.component';
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 import { SamFormControlsModule } from '../../form-controls';
 import { SamFormService } from '../../form-service';
 

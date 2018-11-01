@@ -5,9 +5,9 @@ import * as moment_ from 'moment/moment';
 const moment = moment_;
 
 // Load the implementations that should be tested
-import { SamCommentsModule } from '../';
+import { SamCommentsModule } from '../comments.module';
 import { Comment } from '../interfaces';
-import { SamCommentComponent } from './';
+import { SamCommentComponent } from './comment.component';
 
 describe('The Sam Comment component', () => {
   let component: SamCommentComponent;

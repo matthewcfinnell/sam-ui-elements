@@ -6,7 +6,7 @@ import { FormsModule, FormControl } from '@angular/forms';
 import { SamPhoneEntryComponent } from './phone-entry.component';
 import { SamFormControlsModule } from '../../form-controls';
 import { SamWrapperModule } from '../../wrappers';
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 import { SamFormService } from '../../form-service';
 
 describe('The Sam Phone Entry component', () => {

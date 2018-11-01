@@ -7,7 +7,7 @@ import {
 import {
   SamAutocompleteComponent,
   AutocompleteService
-} from '../../../ui-kit';
+} from '../../../ui-kit/sam-ui-elements.module';
 
 import { AbstractSamFormly } from '../../sam-formly';
 

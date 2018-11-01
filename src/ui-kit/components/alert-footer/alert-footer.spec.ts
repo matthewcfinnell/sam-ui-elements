@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import {  By  } from '@angular/platform-browser';
 
 // Load the implementations that should be tested
-import { SamAlertFooterComponent, SamAlertFooterService } from './index';
+import { SamAlertFooterComponent, SamAlertFooterService } from './alert-footer.module';
 import { SamAlertComponent } from '../alert/alert.component';
 
 describe('The AlertFooter component', () => {

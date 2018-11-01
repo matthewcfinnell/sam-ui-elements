@@ -8,3 +8,5 @@ import { SamPageTitle } from './page-title.component';
     exports: [ SamPageTitle ],
 })
 export class SamPageTitleModule { }
+
+export * from './page-title.component';

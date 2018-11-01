@@ -3,7 +3,7 @@ import {
   ChangeDetectionStrategy,
   ViewChild, ChangeDetectorRef
 } from '@angular/core';
-import {SamRadioButtonComponent} from '../../../ui-kit';
+import {SamRadioButtonComponent} from '../../../ui-kit/sam-ui-elements.module';
 import {AbstractSamFormly} from '../../sam-formly';
 
 @Component({

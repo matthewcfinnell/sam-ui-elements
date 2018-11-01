@@ -8,3 +8,4 @@ import { DateTimeDisplayPipe } from './date-time-display.pipe';
     exports: [ DateTimeDisplayPipe ],
 })
 export class DateTimeDisplayModule { }
+export {DateTimeDisplayPipe} from './date-time-display.pipe'

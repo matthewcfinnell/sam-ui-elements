@@ -142,10 +142,10 @@ export class SamSidenavComponent implements OnInit {
   }
 }
 
-@NgModule({
-  imports: [ CommonModule ],
-  declarations: [ SamSidenavComponent, SamMenuItemComponent],
-  exports: [ SamSidenavComponent, SamMenuItemComponent ],
-  providers: [ SidenavService ]
-})
-export class SamSidenavModule { }
+// @NgModule({
+//   imports: [ CommonModule ],
+//   declarations: [ SamSidenavComponent, SamMenuItemComponent],
+//   exports: [ SamSidenavComponent, SamMenuItemComponent ],
+//   providers: [ SidenavService ]
+// })
+// export class SamSidenavModule { }

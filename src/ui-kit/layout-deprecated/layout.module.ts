@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { SamComponentsModule } from '../components';
-import { SamElementsModule } from '../elements';
+import { SamComponentsModule } from '../components/components.module';
+import { SamElementsModule } from '../elements/elements.module';
 import { SamDirectivesModule } from '../directives';
 
 import { PageService } from './page.service';

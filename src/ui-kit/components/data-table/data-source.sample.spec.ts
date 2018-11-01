@@ -1,4 +1,4 @@
-import { SamSortable, SamSortDirective } from './';
+import { SamSortDirective,SamSortable  } from './sort.directive';
 import { merge ,  BehaviorSubject ,  Observable,fromEvent } from 'rxjs';
 import { DataSource } from '@angular/cdk';
 

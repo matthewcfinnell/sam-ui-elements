@@ -8,3 +8,4 @@ import { FilesizePipe } from './filesize.pipe';
     exports: [ FilesizePipe ],
 })
 export class SamFilesizeModule { }
+export {FilesizePipe} from './filesize.pipe';

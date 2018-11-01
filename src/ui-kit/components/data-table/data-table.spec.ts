@@ -8,9 +8,9 @@ EventEmitter
 } from '@angular/core';
 import {CdkTableModule} from '@angular/cdk';
 
-import { SamDataTableModule,SamSortDirective } from './';
-import { ExampleDataSource,ExampleDatabase } from './data-source.sample.spec';
-
+import { SamDataTableModule } from './data-table.module';
+import { ExampleDataSource, ExampleDatabase } from './data-source.sample.spec';
+import { SamSortDirective } from './sort.directive';
 @Component({
     selector: 'test-cmp',
     template: `

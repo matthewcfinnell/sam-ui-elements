@@ -3,9 +3,9 @@ import { By } from '@angular/platform-browser';
 import { EventEmitter, ElementRef, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { SamSidenavModule, SamSidenavComponent } from './';
+import {  SamSidenavComponent } from './sidenav.component';
 import { SidenavService } from '../services';
-import { SamUIKitModule } from '../../../index';
+import { SamUIKitModule } from '../../../sam-ui-elements.module';
 
 import { data } from '../services/testdata';
 
@@ -44,7 +44,7 @@ describe('The Sam Sidenav component', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [SamSidenavModule],
+        imports: [],
         declarations: [],
       });
 

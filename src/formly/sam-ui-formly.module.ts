@@ -7,7 +7,7 @@ import {
   ReactiveFormsModule
 } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
-import { SamUIKitModule } from '../ui-kit';
+import { SamUIKitModule } from '../ui-kit/sam-ui-elements.module';
 
 /**
  * Package imports

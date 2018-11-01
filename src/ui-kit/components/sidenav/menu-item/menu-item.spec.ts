@@ -4,9 +4,9 @@ import { EventEmitter, ElementRef, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { SamMenuItemComponent } from './';
-import { SamSidenavModule } from '../';
+import { SamSidenavModule } from '../sidenav.module';
 import { SidenavService } from '../services';
-import { SamUIKitModule } from '../../../index';
+import { SamUIKitModule } from '../../../sam-ui-elements.module';
 
 import { data } from '../services/testdata';
 

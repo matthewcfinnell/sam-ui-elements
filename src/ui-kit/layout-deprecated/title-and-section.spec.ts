@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 // Load the implementations that should be tested
 import { TitleAndSectionComponent } from './title-and-section.component';
 import { By } from '@angular/platform-browser';
-import { SamBadgeComponent } from '../components/badge';
-import { SamElementsModule } from '../elements';
+import { SamBadgeComponent } from '../components/badge/badge.module';
+import { SamElementsModule } from '../elements/elements.module';
 
 
 describe('TitleAndSectionComponent component', () => {

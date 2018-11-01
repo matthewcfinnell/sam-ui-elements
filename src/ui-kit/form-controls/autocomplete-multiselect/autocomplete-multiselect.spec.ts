@@ -6,7 +6,7 @@ import { ChangeDetectorRef } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Load the implementations that should be tested
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 import {
     SamAutocompleteMultiselectComponent,
     KeyValueConfig

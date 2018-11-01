@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { SamDateTimeComponent } from './date-time.component';
 import { SamDateComponent } from '../date/date.component';
 import { SamTimeComponent } from '../time/time.component';
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 import { SamFormService } from '../../form-service';
 import { SamWrapperModule } from '../../wrappers'; 
 

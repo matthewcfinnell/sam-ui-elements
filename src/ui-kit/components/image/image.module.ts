@@ -17,3 +17,5 @@ import { SamImageComponent } from './image.component';
   ]
 })
 export class SamImageModule {}
+
+export { SamImageComponent } from './image.component';

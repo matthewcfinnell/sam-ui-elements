@@ -4,7 +4,7 @@ import { ElementRef } from '@angular/core';
 
 // Load the implementations that should be tested
 import { SamModalComponent } from './modal.component';
-import { SamElementsModule } from '../../elements';
+import { SamElementsModule } from '../../elements/elements.module';
 
 describe('The Sam Modal component', () => {
   describe('isolated tests', () => {

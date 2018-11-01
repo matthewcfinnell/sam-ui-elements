@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { BadgeConfig } from '../components';
+import { BadgeConfig } from '../components/badge/badge.module';
 
 @Component({
   selector: 'title-and-section',

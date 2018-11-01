@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 
 // Load the implementations that should be tested
 import { SamCheckboxComponent } from './checkbox.component';
-import { SamUIKitModule } from '../../index';
+import { SamUIKitModule } from '../../sam-ui-elements.module';
 import { SamFormService } from '../../form-service';
 import { SamWrapperModule } from '../../wrappers'; 
 import { FormControl } from '@angular/forms';

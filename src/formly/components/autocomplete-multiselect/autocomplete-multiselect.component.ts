@@ -3,7 +3,7 @@ import {
   ChangeDetectionStrategy,
   ViewChild, ChangeDetectorRef
 } from '@angular/core';
-import {SamAutocompleteMultiselectComponent} from '../../../ui-kit';
+import {SamAutocompleteMultiselectComponent} from '../../../ui-kit/sam-ui-elements.module';
 import {AbstractSamFormly} from '../../sam-formly';
 
 @Component({
